@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">formulario</string>
+    <string name="nombre_ET">Nombre</string>
+    <string name="correo_ET">Correo Electrónico</string>
+    <string name="tel_ET">Teléfono</string>
+    <string name="constra_ET">Constraseña</string>
+    <string name="repcontra_ET">Repetir contraseña</string>
+    <string name="femenino_RB">Femenino</string>
+    <string name="masculino_RB">Masculino</string>
+    <string name="formulario_TV">Registro de Formulario</string>
+    <string name="hobbies_TV">Hobbies</string>
+    <string name="gimnasio_CB">Gimnasio</string>
+    <string name="cine_CB">Cine</string>
+    <string name="series_CB">Series</string>
+    <string name="bailar_CB">Bailar</string>
+    <string name="atlestismo_CB">Atlestismo</string>
+    <string name="date_B">Fecha de nacimiento</string>
+    <string name="year_TV">dd/mm/yyyy</string>
+    <string name="lugar_TV">Lugar de Nacimiento</string>
+    <string name="datos_TV">datos</string>
+    <string name="guardar_B">Guardar</string>
+    <string name="mostrar_datos">Resultado</string>
+    <string-array name="ciudaddes">
+        <item>Medellín</item>
+        <item>Barranquilla</item>
+        <item>Cali</item>
+        <item>Bogotá</item>
+        <item>Manizales</item>
+    </string-array>
+</resources>

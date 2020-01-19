@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/formularioTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/formulario_TV"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nombreET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/nombre_ET"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formularioTV" />
+
+            <EditText
+                android:id="@+id/correoET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/correo_ET"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombreET" />
+
+            <EditText
+                android:id="@+id/telET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tel_ET"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/correoET" />
+
+            <EditText
+                android:id="@+id/contraET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/constra_ET"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/telET" />
+
+            <EditText
+                android:id="@+id/repcontraET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/repcontra_ET"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contraET" />
+
+            <RadioGroup
+                android:id="@+id/generoRG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/repcontraET">
+
+                <RadioButton
+                    android:id="@+id/botonf"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/femenino_RB" />
+
+                <RadioButton
+                    android:id="@+id/botonm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/masculino_RB" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hobbies_TV"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generoRG" />
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow3">
+
+                <Button
+                    android:id="@+id/fechanacimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_B" />
+
+                <TextView
+                    android:id="@+id/formatotv"
+                    android:layout_width="197dp"
+                    android:layout_height="45dp"
+                    android:hint="@string/year_TV"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <CheckBox
+                    android:id="@+id/gymCB"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gimnasio_CB" />
+
+                <CheckBox
+                    android:id="@+id/cineCB"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cine_CB" />
+
+                <CheckBox
+                    android:id="@+id/baileCB"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bailar_CB" />
+
+                <CheckBox
+                    android:id="@+id/serieCB"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/series_CB" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow2">
+
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lugar_TV"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="455dp" />
+
+                <Spinner
+                    android:id="@+id/spinciudad"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="259dp"
+                    tools:layout_editor_absoluteY="458dp"
+                    android:entries="@array/ciudaddes"/>
+
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/guardadatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp"
+                android:text="@string/guardar_B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toEndOf="@+id/datosalida"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow4" />
+
+            <TextView
+                android:id="@+id/datosalida"
+                android:layout_width="235dp"
+                android:layout_height="235dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/mostrar_datos"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
