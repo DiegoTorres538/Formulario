@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var salida:String
     lateinit var hobbies:String
     lateinit var textofin:String
-    lateinit var sexo:String
+    private var sexo:String = "Femenino"
     private var auxhobbie1:String = ""
     private var auxhobbie2:String = ""
     private var auxhobbie3:String = ""
@@ -33,19 +33,39 @@ class MainActivity : AppCompatActivity() {
         }
 
         gymCB.setOnClickListener{
-            auxhobbie1 = getString(R.string.gimnasio_CB)
+            if(gymCB.isChecked){
+                auxhobbie1 = getString(R.string.gimnasio_CB)
+            }
+            else{
+                auxhobbie1 = ""
+            }
         }
 
         cineCB.setOnClickListener{
-            auxhobbie2 = getString(R.string.cine_CB)
+            if(cineCB.isChecked){
+                auxhobbie2 = getString(R.string.cine_CB)
+            }
+            else{
+                auxhobbie2 = ""
+            }
         }
 
         serieCB.setOnClickListener{
-            auxhobbie3 = getString(R.string.series_CB)
+            if(serieCB.isChecked){
+                auxhobbie3 = getString(R.string.series_CB)
+            }
+            else{
+                auxhobbie3 = ""
+            }
         }
 
         baileCB.setOnClickListener {
-            auxhobbie4 = getString(R.string.bailar_CB)
+            if(baileCB.isChecked){
+                auxhobbie4 = getString(R.string.bailar_CB)
+            }
+            else{
+                auxhobbie4 = ""
+            }
         }
 
         contenedor.setOnCheckedChangeListener { group, checkedId ->  }
